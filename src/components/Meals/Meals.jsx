@@ -49,8 +49,11 @@ const Meals = () => {
               {meals.length > 0 && !error && (
                   <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 ">
                       {meals.map((meal) => (
-                          <div key={meal.idMeal} className="p-6 transition-shadow duration-300 bg-white border-2 border-gray-200 rounded-lg shadow-md hover:shadow-xl">
-                              <div className="w-full h-64 overflow-hidden rounded-t-lg">
+                          <div
+                              key={meal.idMeal}
+                              className="p-6 bg-white border-2 border-gray-200 rounded-lg"
+                          >
+                              <div className="w-full h-64 overflow-hidden rounded-lg">
                                   <Image
                                       src={meal.strMealThumb}
                                       alt={meal.strMeal}
